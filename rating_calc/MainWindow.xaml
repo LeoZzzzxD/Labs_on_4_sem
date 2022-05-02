@@ -1,0 +1,37 @@
+﻿<Window x:Class="rating_calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rating_calc"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Title="rating calculator" Height="250" Width="500">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+    
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <ComboBox Name="StudentList" Height="30" Width="120" Grid.Row="0" Grid.Column="0"/>
+        <ComboBox Name="ItemList" Height="30" Width="120" Grid.Row="0" Grid.Column="1"/>
+        <ComboBox Name="TeachList" Height="30" Width="120" Grid.Row="0" Grid.Column="2"/>
+        
+        <Button Content="Рейтинг студентов" Click="get_st_rating" Width="100" Height="30" Grid.Row="3" FontSize="8"/>
+        <Button Content="Рейтинг преподавателей" Click="get_teach_rating" Width="100" Height="30" Grid.Row="3" Grid.Column="2" FontSize="8"/>
+        <Button Content="Удалить студента" Click="remove_student" Width="100" Height="30" Grid.Row="2" Grid.Column="0" FontSize="8"/>
+        <Button Content="Удалить преподавателя" Click="remove_teacher" Width="100" Height="30" Grid.Row="2" Grid.Column="2" FontSize="8"/>
+        <Button Content="Добавить студента" Click="add_student" Width="100" Height="30" Grid.Row="1" Grid.Column="0" FontSize="8"/>
+        <Button Content="Добавить преподавателя" Click="add_teacher" Width="100" Height="30" Grid.Row="1" Grid.Column="2" FontSize="8"/>
+    </Grid>
+</Window>
